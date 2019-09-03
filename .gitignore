@@ -1,0 +1,9 @@
+app/build
+/build
+.gradle/
+.idea/
+*.ipr
+*.iws
+*.iml
+viewer/
+/viewer

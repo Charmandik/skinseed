@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="ru.rarescrap.testskinseedviewer.View3DActivity">
+
+    <include layout="@layout/view_activity_toolbar" />
+    <!--<FrameLayout
+        android:id="@+id/view_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:bg="@color/white"
+        />-->
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/black_four">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:gravity="center"
+            android:text="@string/render_info"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <supercraftskins.viewer.MinecraftSteveView
+            android:id="@+id/minecraft_steve_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:auto_rotate="false"
+            app:perspective="2" />
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:id="@+id/block_choose"
+                android:layout_width="200px"
+                android:layout_height="100dp"
+                android:layout_marginStart="20dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone"/>
+        </HorizontalScrollView>
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/pose_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/greyish_brown_eight"
+        android:orientation="horizontal">
+
+    </LinearLayout>
+</LinearLayout>
